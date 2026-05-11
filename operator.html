@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>Operator ?</title>
+    </head>
+    <body>
+        <script>
+            const nilai = prompt("Nilai (0-100): ", 0);
+            let hasil = (nilai) => {
+                if (nilai >= 80 && nilai <= 100) {
+                    return "A";
+                } else if (nilai >= 65 && nilai <= 79) {
+                    return "B";
+                } else if (nilai >= 40 && nilai <= 64) {
+                    return "C";
+                } else if (nilai >= 21 && nilai <= 39) {
+                    return "D";
+                } else {
+                    return "E";
+                }
+            }
+            document.write("Hasil: " + hasil(nilai));
+        </script>
+    </body>
+</html>
