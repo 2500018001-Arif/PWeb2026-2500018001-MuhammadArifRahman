@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="id">
+    <head>
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                font-family: "Trebuchet MS", sans-serif;
+                background-color: #f4f6f9;
+                margin: 0;
+            }
+
+            .top-section {
+                grid-area: top-section;
+                background-color: #1e293b;
+                color: white;
+                padding: 30px;
+                text-align: center;
+                font-size: 35px;
+                border-radius: 8px;
+            }
+
+            .layout-grid {
+                display: grid;
+                grid-template-areas:
+                    "top-section top-section top-section top-section top-section top-section"
+                    "box-a box-a box-b box-b box-c box-c"
+                    "box-d box-d box-e box-e box-f box-f"
+                    "bottom-section bottom-section bottom-section bottom-section bottom-section bottom-section";
+                grid-column-gap: 10px;
+                grid-row-gap: 10px;
+                padding: 10px;
+            }
+
+            .box-a,
+            .box-b,
+            .box-c,
+            .box-d,
+            .box-e,
+            .box-f {
+                padding: 10px;
+                height: 300px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 10px;
+                color: white;
+                font-size: 35px;
+                font-weight: bold;
+            }
+
+            .box-a {
+                grid-area: box-a;
+                background-color: #ef4444;
+            }
+
+            .box-b {
+                grid-area: box-b;
+                background-color: #f59e0b;
+            }
+
+            .box-c {
+                grid-area: box-c;
+                background-color: #10b981;
+            }
+
+            .box-d {
+                grid-area: box-d;
+                background-color: #3b82f6;
+            }
+
+            .box-e {
+                grid-area: box-e;
+                background-color: #8b5cf6;
+            }
+
+            .box-f {
+                grid-area: box-f;
+                background-color: #ec4899;
+            }
+
+            .box-a:hover,
+            .box-b:hover,
+            .box-c:hover,
+            .box-d:hover,
+            .box-e:hover,
+            .box-f:hover {
+                opacity: 0.85;
+                transform: scale(1.02);
+                transition: 0.3s;
+            }
+
+            .bottom-section {
+                grid-area: bottom-section;
+                background-color: #1e293b;
+                color: white;
+                padding: 15px;
+                text-align: center;
+                font-size: 30px;
+                border-radius: 8px;
+            }
+
+            @media (max-width: 600px) {
+                .layout-grid {
+                    grid-template-areas:
+                        "top-section top-section top-section top-section top-section top-section"
+                        "box-a box-a box-a box-a box-a box-a"
+                        "box-b box-b box-b box-b box-b box-b"
+                        "box-c box-c box-c box-c box-c box-c"
+                        "bottom-section bottom-section bottom-section bottom-section bottom-section bottom-section";
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="layout-grid">
+            <div class="top-section">
+                <h2>Header</h2>
+            </div>
+
+            <div class="box-a">Menu 1</div>
+            <div class="box-b">Menu 2</div>
+            <div class="box-c">Menu 3</div>
+
+            <div class="box-d">Menu 4</div>
+            <div class="box-e">Menu 5</div>
+            <div class="box-f">Menu 6</div>
+
+            <div class="bottom-section">
+                <p>Footer</p>
+            </div>
+        </div>
+    </body>
+</html>
